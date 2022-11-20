@@ -15,7 +15,7 @@ int d = (userInput / 10) % 10 ;
 Console.WriteLine($"Результаты вычислений: {a}, {b}, {c}, {d}");
 
 if(a == b & c == d)
-Console.WriteLine($"Результат: {userInput} -> да");
+    Console.WriteLine($"Результат: {userInput} -> да");
 else
 {
     Console.WriteLine($"Результат: {userInput} -> нет");

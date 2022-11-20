@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 23
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+Console.Clear();                                        // очищаем консоль
+Console.Write("Введите число: ");                       // просим пользователя ввести число
+int userInput = int.Parse(Console.ReadLine() ?? "");    // присваиваем переменной , то что ввел пользователь
+int num = 1;                                            // первое число, возводимое в куб
+Console.Write($"Результат: {userInput} -> ");           // выведем сообщение 
+while(num <= userInput)                                 // запускаем цикл
+    {
+        
+        int result = (int) Math.Pow(num, 3);            // возводим число в куб
+        if(num == userInput)                            // если равно, печатаем результат и выходим из цикла
+        {
+            Console.Write(result);                      // выводим получившееся число в результат
+            break;                                      // выходим из цикла
+        }
+                                            
+        Console.Write($"{result}, " );                  // выводим получившееся число в результат
+        num++;                                          // увеличиваем каждое число на 1
+    }
